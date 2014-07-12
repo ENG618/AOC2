@@ -22,6 +22,11 @@
 		5C409E3D1971E9DA0002F236 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C409E1C1971E9DA0002F236 /* UIKit.framework */; };
 		5C409E451971E9DA0002F236 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C409E431971E9DA0002F236 /* InfoPlist.strings */; };
 		5C409E471971E9DA0002F236 /* AOCProject1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E461971E9DA0002F236 /* AOCProject1Tests.m */; };
+		5C409E551971EA950002F236 /* GEMMustang.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E541971EA950002F236 /* GEMMustang.m */; };
+		5C409E581971EAA80002F236 /* GEMWrangler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E571971EAA80002F236 /* GEMWrangler.m */; };
+		5C409E5B1971EAC60002F236 /* GEMF350.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E5A1971EAC60002F236 /* GEMF350.m */; };
+		5C409E5F1971EB5B0002F236 /* GEMBaseVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E5E1971EB5B0002F236 /* GEMBaseVehicle.m */; };
+		5C409E621971EB950002F236 /* GEMVehicleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C409E611971EB950002F236 /* GEMVehicleFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,16 @@
 		5C409E421971E9DA0002F236 /* AOCProject1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOCProject1Tests-Info.plist"; sourceTree = "<group>"; };
 		5C409E441971E9DA0002F236 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C409E461971E9DA0002F236 /* AOCProject1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOCProject1Tests.m; sourceTree = "<group>"; };
+		5C409E531971EA950002F236 /* GEMMustang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMMustang.h; sourceTree = "<group>"; };
+		5C409E541971EA950002F236 /* GEMMustang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMMustang.m; sourceTree = "<group>"; };
+		5C409E561971EAA80002F236 /* GEMWrangler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMWrangler.h; sourceTree = "<group>"; };
+		5C409E571971EAA80002F236 /* GEMWrangler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMWrangler.m; sourceTree = "<group>"; };
+		5C409E591971EAC60002F236 /* GEMF350.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMF350.h; sourceTree = "<group>"; };
+		5C409E5A1971EAC60002F236 /* GEMF350.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMF350.m; sourceTree = "<group>"; };
+		5C409E5D1971EB5B0002F236 /* GEMBaseVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMBaseVehicle.h; sourceTree = "<group>"; };
+		5C409E5E1971EB5B0002F236 /* GEMBaseVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMBaseVehicle.m; sourceTree = "<group>"; };
+		5C409E601971EB950002F236 /* GEMVehicleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMVehicleFactory.h; sourceTree = "<group>"; };
+		5C409E611971EB950002F236 /* GEMVehicleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMVehicleFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +137,7 @@
 				5C409E311971E9DA0002F236 /* GEMViewController.m */,
 				5C409E331971E9DA0002F236 /* Images.xcassets */,
 				5C409E1F1971E9DA0002F236 /* Supporting Files */,
+				5C409E5C1971EAD70002F236 /* Custum Class */,
 			);
 			path = AOCProject1;
 			sourceTree = "<group>";
@@ -153,6 +169,23 @@
 				5C409E431971E9DA0002F236 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C409E5C1971EAD70002F236 /* Custum Class */ = {
+			isa = PBXGroup;
+			children = (
+				5C409E5D1971EB5B0002F236 /* GEMBaseVehicle.h */,
+				5C409E5E1971EB5B0002F236 /* GEMBaseVehicle.m */,
+				5C409E531971EA950002F236 /* GEMMustang.h */,
+				5C409E541971EA950002F236 /* GEMMustang.m */,
+				5C409E561971EAA80002F236 /* GEMWrangler.h */,
+				5C409E571971EAA80002F236 /* GEMWrangler.m */,
+				5C409E591971EAC60002F236 /* GEMF350.h */,
+				5C409E5A1971EAC60002F236 /* GEMF350.m */,
+				5C409E601971EB950002F236 /* GEMVehicleFactory.h */,
+				5C409E611971EB950002F236 /* GEMVehicleFactory.m */,
+			);
+			name = "Custum Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +288,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C409E291971E9DA0002F236 /* GEMAppDelegate.m in Sources */,
+				5C409E5B1971EAC60002F236 /* GEMF350.m in Sources */,
+				5C409E551971EA950002F236 /* GEMMustang.m in Sources */,
 				5C409E321971E9DA0002F236 /* GEMViewController.m in Sources */,
 				5C409E251971E9DA0002F236 /* main.m in Sources */,
+				5C409E5F1971EB5B0002F236 /* GEMBaseVehicle.m in Sources */,
+				5C409E581971EAA80002F236 /* GEMWrangler.m in Sources */,
+				5C409E621971EB950002F236 /* GEMVehicleFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +509,7 @@
 				5C409E4C1971E9DA0002F236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C409E4D1971E9DA0002F236 /* Build configuration list for PBXNativeTarget "AOCProject1Tests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +518,7 @@
 				5C409E4F1971E9DA0002F236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
