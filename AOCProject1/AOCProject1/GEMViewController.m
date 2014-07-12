@@ -9,6 +9,12 @@
 #import "GEMViewController.h"
 
 @interface GEMViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *vehicleOneLable;
+@property (strong, nonatomic) IBOutlet UILabel *vehicleOneDescription;
+@property (strong, nonatomic) IBOutlet UILabel *vehicleTwoLable;
+@property (strong, nonatomic) IBOutlet UILabel *vehicleTwoDescription;
+@property (strong, nonatomic) IBOutlet UILabel *vehicleThreeLable;
+@property (strong, nonatomic) IBOutlet UILabel *vehicleTreeDescription;
 
 @end
 
