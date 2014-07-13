@@ -20,10 +20,9 @@
 {
     if (self = [super init]) {
         model = @"Base Model";
-        favYear = 0000;
+        modelYear = 2014;
         isFourByFour = NO;
-        
-        
+        fuleEconomy = 15;
     }
     return self;
 }
@@ -46,4 +45,25 @@
     
 }
 
+// Calulates fule economy based on vehicle year
+-(int)getFuleEconomy
+{
+    int newFuleEconomy = fuleEconomy;
+    
+    if (modelYear > 2000) {
+        newFuleEconomy = fuleEconomy + 5;
+    }else if (modelYear < 1980) {
+        newFuleEconomy = fuleEconomy - 5;
+    }
+    return newFuleEconomy;
+}
+
 @end
+
+
+
+
+
+
+
+

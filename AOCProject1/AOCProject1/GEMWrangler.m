@@ -14,7 +14,7 @@
 {
     if (self = [super init]) {
         model = @"Jeep Wrangler";
-        favYear = 2007;
+        modelYear = 2007;
         isFourByFour = YES;
     }
     return self;

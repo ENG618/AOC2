@@ -11,11 +11,13 @@
 @interface GEMBaseVehicle : NSObject
 {
     NSString *model;
-    int favYear;
+    int modelYear;
     BOOL isFourByFour;
+    int fuleEconomy;
 }
 
 -(NSString*)getModel;
 -(void)setModel:(NSString*)modleName;
+-(int)getFuleEconomy;
 
 @end
