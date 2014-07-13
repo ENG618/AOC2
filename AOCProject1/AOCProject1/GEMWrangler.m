@@ -22,6 +22,7 @@
         modelYear = 2007;
         isFourByFour = YES;
         numDoors = 4;
+        [super printName];
     }
     return self;
 }
@@ -45,6 +46,8 @@
     }else if (numDoors == 2){
         newFuleEconomy = newFuleEconomy + 1;
     }
+    
+    NSLog(@"The fule economy specific to Wrangler is: %i", newFuleEconomy);
     
     return newFuleEconomy;
 }

@@ -37,7 +37,7 @@
 // Privet method print name to consol
 -(void)printName
 {
-    NSLog(@"the model: %@ has been intantiated", model);
+    NSLog(@"The vehicle: %@ has been intantiated", model);
 }
 
 // Returns modle name

@@ -18,6 +18,7 @@
         modelYear = 1967;
         isFourByFour = NO;
         horsePower = 351;
+        [super printName];
     }
     return self;
 }
@@ -39,6 +40,8 @@
     if (horsePower > 300) {
         newFuleEconomy = newFuleEconomy - 2;
     }
+    
+    NSLog(@"The fule economy specific to Mustang is: %i", newFuleEconomy);
 
     return newFuleEconomy;
 }

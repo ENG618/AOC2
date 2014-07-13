@@ -41,6 +41,8 @@
         newFuleEconomy = newFuleEconomy + 7;
     }
     
+    NSLog(@"The fule economy specific to F-350 is: %i", newFuleEconomy);
+    
     return newFuleEconomy;
 }
 
