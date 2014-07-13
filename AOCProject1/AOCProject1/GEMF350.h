@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GEMBaseVehicle.h"
 
-@interface GEMF350 : NSObject
+@interface GEMF350 : GEMBaseVehicle
 
 @end

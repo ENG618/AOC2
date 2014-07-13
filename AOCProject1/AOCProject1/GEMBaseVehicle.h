@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface GEMBaseVehicle : NSObject
+{
+    NSString *modle;
+    int favYear;
+    bool *isFourByFour;
+}
 
 @end

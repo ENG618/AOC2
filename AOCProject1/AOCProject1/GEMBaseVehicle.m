@@ -10,4 +10,14 @@
 
 @implementation GEMBaseVehicle
 
+-(id)init
+{
+    if (self = [super init]) {
+        modle = nil;
+        favYear = 0;
+        isFourByFour = NO;
+    }
+    return self;
+}
+
 @end

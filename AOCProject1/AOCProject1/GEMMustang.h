@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GEMBaseVehicle.h"
 
-@interface GEMMustang : NSObject
+@interface GEMMustang : GEMBaseVehicle
 
 @end

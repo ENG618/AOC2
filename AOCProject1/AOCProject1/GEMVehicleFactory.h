@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GEMBaseVehicle.h"
+#import "GEMF350.h"
+#import "GEMMustang.h"
+#import "GEMWrangler.h"
+
 
 @interface GEMVehicleFactory : NSObject
 
