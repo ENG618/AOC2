@@ -10,14 +10,17 @@
 
 @implementation GEMF350
 
+// Creates getter and setter method for properties
+@synthesize isDesel;
+
 -(id)init
 {
     self = [super init];
     if (self) {
-        model = @"Ford F-150";
-        modelYear = 2012;
-        isFourByFour = YES;
-        isDesel = YES;
+        [self setModel:@"Ford F-150"];
+        [self setModelYear:2012];
+        [self setIsFourByFour:YES];
+        [self setIsDesel:YES];
         [super printName];
     }
     return self;
@@ -27,13 +30,13 @@
 // Calulates fule economy based on vehicle year
 -(int)getFuleEconomy
 {
-    int newFuleEconomy = fuleEconomy;
+    int newFuleEconomy = [self fuleEconomy];
     
     // Calculation adjustment from model year
-    if (modelYear > 2000) {
-        newFuleEconomy = fuleEconomy + 5;
-    }else if (modelYear < 1980) {
-        newFuleEconomy = fuleEconomy - 5;
+    if ([self modelYear] > 2000) {
+        newFuleEconomy = [self fuleEconomy] + 5;
+    }else if ([self modelYear] < 1980) {
+        newFuleEconomy = [self fuleEconomy] - 5;
     }
     
     // Additional calculation adjustment from if desel powered

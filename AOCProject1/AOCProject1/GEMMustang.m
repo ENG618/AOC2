@@ -10,14 +10,17 @@
 
 @implementation GEMMustang
 
+// Creates getter and setter method for properties
+@synthesize horsePower;
+
 -(id)init
 {
     self = [super init];
     if (self) {
-        model = @"Ford Mustang";
-        modelYear = 1967;
-        isFourByFour = NO;
-        horsePower = 351;
+        [self setModel:@"Ford Mustang"];
+        [self setModelYear:1967];
+        [self setIsFourByFour:NO];
+        [self setHorsePower:351];
         [super printName];
     }
     return self;
@@ -27,13 +30,13 @@
 // Calulates fule economy based on vehicle year
 -(int)getFuleEconomy
 {
-    int newFuleEconomy = fuleEconomy;
+    int newFuleEconomy = [self fuleEconomy];
     
     // Calculation adjustment from model year
-    if (modelYear > 2000) {
-        newFuleEconomy = fuleEconomy + 5;
-    }else if (modelYear < 1980) {
-        newFuleEconomy = fuleEconomy - 5;
+    if ([self modelYear] > 2000) {
+        newFuleEconomy = [self fuleEconomy] + 5;
+    }else if ([self modelYear] < 1980) {
+        newFuleEconomy = [self fuleEconomy] - 5;
     }
     
     // Additional calculation adjustment from hoursepower

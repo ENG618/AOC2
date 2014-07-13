@@ -10,8 +10,7 @@
 #import "GEMBaseVehicle.h"
 
 @interface GEMMustang : GEMBaseVehicle
-{
-    int horsePower;
-}
+
+@property int horsePower;
 
 @end

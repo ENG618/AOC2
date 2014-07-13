@@ -11,6 +11,9 @@
 
 @implementation GEMBaseVehicle
 
+// Creates getter and setter method for properties
+@synthesize model,modelYear, isFourByFour, fuleEconomy;
+
 -(id)init
 {
     self = [super init];
