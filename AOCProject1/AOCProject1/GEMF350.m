@@ -12,11 +12,13 @@
 
 -(id)init
 {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         model = @"Ford F-150";
         modelYear = 2012;
         isFourByFour = YES;
         isDesel = YES;
+        [super printName];
     }
     return self;
 }

@@ -24,10 +24,17 @@ typedef enum
     int fuleEconomy;
 }
 
+// Custom initWithName
 -(id)initWithVehicle:(NSString*)vModel vYear:(int)vYear v4x4Status:(BOOL)v4x4Status;
 
--(NSString*)getModel;
--(void)setModel:(NSString*)modleName;
+// Base methods
+// Getter
+-(NSString*)getVehicle;
+// Setter
+-(void)setVehicle:(NSString*)modleName;
+// Calulatioin
 -(int)getFuleEconomy;
+
+-(void)printName;
 
 @end

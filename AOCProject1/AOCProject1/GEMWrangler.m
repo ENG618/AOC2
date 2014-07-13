@@ -16,7 +16,8 @@
 
 -(id)init
 {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         model = @"Jeep Wrangler";
         modelYear = 2007;
         isFourByFour = YES;

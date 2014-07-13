@@ -7,6 +7,8 @@
 //
 
 #import "GEMViewController.h"
+#import "GEMVehicleFactory.h"
+@class GEMBaseVehicle;
 
 @interface GEMViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneLable;
@@ -24,6 +26,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Instantiate F-350
+    [GEMVehicleFactory getVehicle:vehicleType_F350];
+    
+    // Instantiate instance of factory
+    //GEMVehicleFactory *factory = [[GEMVehicleFactory alloc] init];
+    // Check validity
+    //if (factory) {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    //}
 }
 
 - (void)didReceiveMemoryWarning

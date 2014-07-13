@@ -10,7 +10,7 @@
 
 @implementation GEMVehicleFactory
 
--(GEMBaseVehicle*)getVehicle:(EVehicleType)vehicleType
++(GEMBaseVehicle*)getVehicle:(EVehicleType)vehicleType
 {
     // Method variable
     GEMBaseVehicle * currentVehicle;

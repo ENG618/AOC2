@@ -9,16 +9,12 @@
 #import "GEMBaseVehicle.h"
 #import "GEMVehicleFactory.h"
 
-// Privet methods
-@interface GEMBaseVehicle ()
--(void)printName;
-@end
-
 @implementation GEMBaseVehicle
 
 -(id)init
 {
-    if (self = [super init]) {
+    self = [super init];
+    if (self) {
         model = @"Base Model";
         modelYear = 2014;
         isFourByFour = NO;
@@ -32,24 +28,25 @@
     model = vModel;
     modelYear = vYear;
     isFourByFour = v4x4Status;
+    [self printName];
     
     return self;
 }
 
-// Print name to consol
+// Privet method print name to consol
 -(void)printName
 {
-    NSLog(@"Selected model: %@", model);
+    NSLog(@"the model: %@ has been intantiated", model);
 }
 
 // Returns modle name
--(NSString*)getModel
+-(NSString*)getVehicle
 {
     return model;
 }
 
 // Created model
--(void)setModel:(NSString *)modleName
+-(void)setVehicle:(NSString *)modleName
 {
     
 }
