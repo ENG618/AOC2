@@ -10,5 +10,8 @@
 #import "GEMBaseVehicle.h"
 
 @interface GEMF350 : GEMBaseVehicle
+{
+    BOOL isDesel;
+}
 
 @end

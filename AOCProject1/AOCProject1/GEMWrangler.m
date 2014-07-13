@@ -20,6 +20,7 @@
         model = @"Jeep Wrangler";
         modelYear = 2007;
         isFourByFour = YES;
+        numDoors = 4;
     }
     return self;
 }

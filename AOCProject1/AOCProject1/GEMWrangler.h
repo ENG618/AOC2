@@ -10,5 +10,8 @@
 #import "GEMBaseVehicle.h"
 
 @interface GEMWrangler : GEMBaseVehicle
+{
+    int numDoors;
+}
 
 @end

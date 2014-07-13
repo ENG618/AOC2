@@ -16,6 +16,7 @@
         model = @"Ford F-150";
         modelYear = 2012;
         isFourByFour = YES;
+        isDesel = YES;
     }
     return self;
 }
