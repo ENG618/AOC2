@@ -27,6 +27,15 @@
     return self;
 }
 
+-(id)initWithVehicle:(NSString*)vModel vYear:(int)vYear v4x4Status:(BOOL)v4x4Status
+{
+    model = vModel;
+    modelYear = vYear;
+    isFourByFour = v4x4Status;
+    
+    return self;
+}
+
 // Print name to consol
 -(void)printName
 {

@@ -24,6 +24,8 @@ typedef enum
     int fuleEconomy;
 }
 
+-(id)initWithVehicle:(NSString*)vModel vYear:(int)vYear v4x4Status:(BOOL)v4x4Status;
+
 -(NSString*)getModel;
 -(void)setModel:(NSString*)modleName;
 -(int)getFuleEconomy;
