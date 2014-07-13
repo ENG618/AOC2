@@ -19,6 +19,7 @@
         modelYear = 2014;
         isFourByFour = NO;
         fuleEconomy = 15;
+
     }
     return self;
 }
