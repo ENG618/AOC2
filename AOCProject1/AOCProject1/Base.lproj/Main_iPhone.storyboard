@@ -64,8 +64,8 @@
                     <connections>
                         <outlet property="vehicleOneDescription" destination="41S-Ba-hmo" id="gt1-gL-Pok"/>
                         <outlet property="vehicleOneLable" destination="qCB-To-w0Z" id="g9f-2j-mwO"/>
+                        <outlet property="vehicleThreeDescription" destination="hgq-oC-PSU" id="TfE-Bq-H8E"/>
                         <outlet property="vehicleThreeLable" destination="AXw-IX-GV4" id="6o5-Kg-HNS"/>
-                        <outlet property="vehicleTreeDescription" destination="hgq-oC-PSU" id="7fQ-iv-ybC"/>
                         <outlet property="vehicleTwoDescription" destination="y6v-YV-sBP" id="Wzt-Rx-OOM"/>
                         <outlet property="vehicleTwoLable" destination="1Jg-hV-bgg" id="rd9-l7-sas"/>
                     </connections>
