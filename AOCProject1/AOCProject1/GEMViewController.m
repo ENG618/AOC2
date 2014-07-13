@@ -33,7 +33,7 @@
     if (factory) {
         
         // Instantiate F-350
-        GEMBaseVehicle *f350 = [GEMVehicleFactory getVehicle:vehicleType_F350];
+        GEMBaseVehicle *f350 = [GEMVehicleFactory getVehicle:F350];
         // Check validity
         if (f350) {
             self.vehicleOneLable.text = [f350 getVehicle];
@@ -41,7 +41,7 @@
         }
         
         // Instantiate Mustang
-        GEMBaseVehicle *mustang = [GEMVehicleFactory getVehicle:vehicleType_Mustang];
+        GEMBaseVehicle *mustang = [GEMVehicleFactory getVehicle:MUSTANG];
         // Check validity
         if (mustang) {
             self.vehicleTwoLable.text = [mustang getVehicle];
@@ -49,7 +49,7 @@
         }
         
         // Instantiate Wrangler
-        GEMBaseVehicle *wrangler = [GEMVehicleFactory getVehicle:vehicleType_Wrangler];
+        GEMBaseVehicle *wrangler = [GEMVehicleFactory getVehicle:WRANGLER];
         // Check validity
         if (wrangler) {
             self.vehicleThreeLable.text = [wrangler getVehicle];

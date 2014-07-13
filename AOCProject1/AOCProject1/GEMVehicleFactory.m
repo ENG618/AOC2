@@ -16,15 +16,15 @@
     GEMBaseVehicle * currentVehicle;
     
     // Checking vehicle type and instanciating correct vehicle
-    if (vehicleType == vehicleType_F350) {
+    if (vehicleType == F350) {
         currentVehicle = [[GEMF350 alloc] init];
         return currentVehicle;
         
-    }else if (vehicleType == vehicleType_Mustang){
+    }else if (vehicleType == MUSTANG){
         currentVehicle = [[GEMMustang alloc] init];
         return currentVehicle;
         
-    }else if (vehicleType == vehicleType_Wrangler){
+    }else if (vehicleType == WRANGLER){
         currentVehicle = [[GEMWrangler alloc] init];
         return currentVehicle;
     }

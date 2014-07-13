@@ -8,13 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum
-{
-    vehicleType_F350=0,
-    vehicleType_Mustang,
-    vehicleType_Wrangler
-}EVehicleType;
-
 @interface GEMBaseVehicle : NSObject
 {
 @protected
@@ -24,16 +17,26 @@ typedef enum
     int fuleEconomy;
 }
 
-// Custom initWithName
--(id)initWithVehicle:(NSString*)vModel vYear:(int)vYear v4x4Status:(BOOL)v4x4Status;
+typedef enum
+{
+    F350=0,
+    MUSTANG,
+    WRANGLER
+}EVehicleType;
 
 // Base methods
+
+// Initialize
+-(id)init;
+
 // Getter
 -(NSString*)getVehicle;
 -(int)getModelYear;
 -(int)getFuleEconomy;
+
 // Setter
 -(void)setVehicle:(NSString*)modleName;
+
 // Calulatioin
 -(int)calcFuleEconomy;
 
