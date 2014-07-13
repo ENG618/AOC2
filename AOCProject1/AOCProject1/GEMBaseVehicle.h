@@ -10,9 +10,12 @@
 
 @interface GEMBaseVehicle : NSObject
 {
-    NSString *modle;
+    NSString *model;
     int favYear;
-    bool *isFourByFour;
+    BOOL isFourByFour;
 }
+
+-(NSString*)getModel;
+-(void)setModel:(NSString*)modleName;
 
 @end

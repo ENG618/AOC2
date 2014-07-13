@@ -10,4 +10,14 @@
 
 @implementation GEMWrangler
 
+-(id)init
+{
+    if (self = [super init]) {
+        model = @"Jeep Wrangler";
+        favYear = 2007;
+        isFourByFour = YES;
+    }
+    return self;
+}
+
 @end

@@ -10,4 +10,14 @@
 
 @implementation GEMMustang
 
+-(id)init
+{
+    if (self = [super init]) {
+        model = @"Ford Mustang";
+        favYear = 1967;
+        isFourByFour = NO;
+    }
+    return self;
+}
+
 @end
