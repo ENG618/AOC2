@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    vehicleType_F350=0,
+    vehicleType_Mustang,
+    vehicleType_Wrangler
+}EVehicleType;
+
 @interface GEMBaseVehicle : NSObject
 {
+@protected
     NSString *model;
     int modelYear;
     BOOL isFourByFour;

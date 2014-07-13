@@ -7,6 +7,10 @@
 //
 
 #import "GEMWrangler.h"
+#import "GEMBaseVehicle.h"
+#import "GEMF350.h"
+#import "GEMMustang.h"
+#import "GEMWrangler.h"
 
 @implementation GEMWrangler
 
