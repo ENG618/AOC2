@@ -21,4 +21,25 @@
     return self;
 }
 
+// Override base class fule economy method
+// Calulates fule economy based on vehicle year
+-(int)getFuleEconomy
+{
+    int newFuleEconomy = fuleEconomy;
+    
+    // Calculation adjustment from model year
+    if (modelYear > 2000) {
+        newFuleEconomy = fuleEconomy + 5;
+    }else if (modelYear < 1980) {
+        newFuleEconomy = fuleEconomy - 5;
+    }
+    
+    // Additional calculation adjustment from if desel powered
+    if (isDesel) {
+        newFuleEconomy = newFuleEconomy + 7;
+    }
+    
+    return newFuleEconomy;
+}
+
 @end
