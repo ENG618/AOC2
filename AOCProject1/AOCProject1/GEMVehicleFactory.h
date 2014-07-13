@@ -15,6 +15,7 @@
 
 @interface GEMVehicleFactory : NSObject
 
+
 +(GEMBaseVehicle*)getVehicle:(EVehicleType)vehicleType;
 
 //+(void)printVehicle:int

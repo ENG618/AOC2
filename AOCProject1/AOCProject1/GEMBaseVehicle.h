@@ -30,10 +30,12 @@ typedef enum
 // Base methods
 // Getter
 -(NSString*)getVehicle;
+-(int)getModelYear;
+-(int)getFuleEconomy;
 // Setter
 -(void)setVehicle:(NSString*)modleName;
 // Calulatioin
--(int)getFuleEconomy;
+-(int)calcFuleEconomy;
 
 -(void)printName;
 

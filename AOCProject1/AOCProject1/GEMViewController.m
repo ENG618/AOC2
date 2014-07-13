@@ -27,13 +27,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // Instantiate F-350
-    [GEMVehicleFactory getVehicle:vehicleType_F350];
-    
-    // Instantiate instance of factory
-    //GEMVehicleFactory *factory = [[GEMVehicleFactory alloc] init];
+    // Create instance of factory
+    GEMVehicleFactory *factory = [[GEMVehicleFactory alloc] init];
     // Check validity
-    //if (factory) {
+    if (factory) {
+        
+        // Instantiate F-350
+        GEMBaseVehicle *f350 = [GEMVehicleFactory getVehicle:vehicleType_F350];
+        self.vehicleOneLable.text = [f350 getVehicle];
+        self.vehicleOneDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [f350 getModelYear], [f350 getFuleEconomy]];
+    
         
         
         
@@ -44,7 +47,7 @@
         
         
         
-    //}
+    }
 }
 
 - (void)didReceiveMemoryWarning

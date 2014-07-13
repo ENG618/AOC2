@@ -46,6 +46,16 @@
     return model;
 }
 
+-(int)getModelYear
+{
+    return modelYear;
+}
+
+-(int)getFuleEconomy
+{
+    return [self calcFuleEconomy];
+}
+
 // Created model
 -(void)setVehicle:(NSString *)modleName
 {
@@ -53,7 +63,7 @@
 }
 
 // Calulates fule economy based on vehicle year
--(int)getFuleEconomy
+-(int)calcFuleEconomy
 {
     int newFuleEconomy = fuleEconomy;
     
