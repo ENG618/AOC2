@@ -28,7 +28,7 @@
 
 // Override base class fule economy method
 // Calulates fule economy based on vehicle year
--(int)getFuleEconomy
+-(int)calcFuleEconomy
 {
     int newFuleEconomy = [self fuleEconomy];
     

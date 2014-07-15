@@ -13,19 +13,19 @@
 +(GEMBaseVehicle*)getVehicle:(EVehicleType)vehicleType
 {
     // Method variable
-    GEMBaseVehicle * currentVehicle;
+    //GEMBaseVehicle * currentVehicle;
     
     // Checking vehicle type and instanciating correct vehicle
     if (vehicleType == F350) {
-        currentVehicle = [[GEMF350 alloc] init];
+        GEMF350 *currentVehicle = [[GEMF350 alloc] init];
         return currentVehicle;
         
     }else if (vehicleType == MUSTANG){
-        currentVehicle = [[GEMMustang alloc] init];
+        GEMMustang *currentVehicle = [[GEMMustang alloc] init];
         return currentVehicle;
         
     }else if (vehicleType == WRANGLER){
-        currentVehicle = [[GEMWrangler alloc] init];
+        GEMWrangler *currentVehicle = [[GEMWrangler alloc] init];
         return currentVehicle;
     }
     return nil;

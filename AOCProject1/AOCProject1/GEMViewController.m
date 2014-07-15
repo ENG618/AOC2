@@ -33,11 +33,11 @@
     if (factory) {
         
         // Instantiate F-350
-        GEMBaseVehicle *f350 = [GEMVehicleFactory getVehicle:F350];
+        GEMF350 *f350 = (GEMF350*)[GEMVehicleFactory getVehicle:F350];
         // Check validity
         if (f350) {
             self.vehicleOneLable.text = [f350 model];
-            self.vehicleOneDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [f350 modelYear], [f350 fuleEconomy]];
+            self.vehicleOneDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [f350 modelYear], [f350 getFuleEconomy]];
         }
         
         // Instantiate Mustang
@@ -45,7 +45,7 @@
         // Check validity
         if (mustang) {
             self.vehicleTwoLable.text = [mustang model];
-            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [mustang modelYear], [mustang fuleEconomy]];
+            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [mustang modelYear], [mustang getFuleEconomy]];
         }
         
         // Instantiate Wrangler
@@ -53,7 +53,7 @@
         // Check validity
         if (wrangler) {
             self.vehicleThreeLable.text = [wrangler model];
-            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [wrangler modelYear], [wrangler fuleEconomy]];
+            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [wrangler modelYear], [wrangler getFuleEconomy]];
         }
         
     }

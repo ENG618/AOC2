@@ -36,10 +36,8 @@ typedef enum
 // Initialize
 -(id)init;
 
-//// Getter
-//-(NSString*)getVehicle;
-//-(int)getModelYear;
-//-(int)getFuleEconomy;
+// Getter
+-(int)getFuleEconomy;
 //
 //// Setter
 //-(void)setVehicle:(NSString*)modleName;
