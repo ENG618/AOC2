@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GEMViewController : UIViewController
+@interface GEMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

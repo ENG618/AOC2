@@ -10,7 +10,7 @@
 #import "GEMVehicleFactory.h"
 @class GEMBaseVehicle;
 
-@interface GEMViewController ()
+@interface GEMViewController () 
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneLable;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneDescription;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleTwoLable;
@@ -63,6 +63,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma mark TableView Delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return number of rows
+    return 3;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"vehicleCell" forIndexPath:indexPath];
+    
+    // Configure cell
+    
+    //[cell.textLabel  setText:@"test label"];
+    
+    return cell;
 }
 
 @end
