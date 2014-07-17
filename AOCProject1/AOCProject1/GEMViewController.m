@@ -10,13 +10,19 @@
 #import "GEMVehicleFactory.h"
 @class GEMBaseVehicle;
 
-@interface GEMViewController () 
+@interface GEMViewController ()
+
+// Lables
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneLable;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneDescription;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleTwoLable;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleTwoDescription;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleThreeLable;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleThreeDescription;
+
+// Buttons
+- (IBAction)buttonOne:(id)sender;
+
 
 @end
 
@@ -53,8 +59,7 @@
         // Check validity
         if (wrangler) {
             self.vehicleThreeLable.text = [wrangler model];
-            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [wrangler modelYear], [wrangler getFuleEconomy]];
-        }
+            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [wrangler modelYear], [wrangler getFuleEconomy]];        }
         
     }
 }
@@ -65,23 +70,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-# pragma mark TableView Delegate
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return number of rows
-    return 3;
+- (IBAction)buttonOne:(id)sender {
+    NSLog(@"ButtonOne was pressed");
 }
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"vehicleCell" forIndexPath:indexPath];
-    
-    // Configure cell
-    
-    //[cell.textLabel  setText:@"test label"];
-    
-    return cell;
-}
-
 @end
