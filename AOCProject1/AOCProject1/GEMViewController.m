@@ -22,6 +22,8 @@
 
 // Buttons
 - (IBAction)buttonOne:(id)sender;
+- (IBAction)buttonTwo:(id)sender;
+- (IBAction)buttonThree:(id)sender;
 
 
 @end
@@ -70,7 +72,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Buttons
+
 - (IBAction)buttonOne:(id)sender {
     NSLog(@"ButtonOne was pressed");
+}
+
+- (IBAction)buttonTwo:(id)sender {
+    NSLog(@"ButtonTwo was pressed");
+}
+
+- (IBAction)buttonThree:(id)sender {
+    NSLog(@"ButtonThree was pressed");
 }
 @end
