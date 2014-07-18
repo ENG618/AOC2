@@ -21,9 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *vehicleThreeDescription;
 
 // Buttons
-- (IBAction)buttonOne:(id)sender;
-- (IBAction)buttonTwo:(id)sender;
-- (IBAction)buttonThree:(id)sender;
+- (IBAction)onClick:(id)sender;
 
 
 @end
@@ -74,15 +72,34 @@
 
 #pragma mark Buttons
 
-- (IBAction)buttonOne:(id)sender {
-    NSLog(@"ButtonOne was pressed");
+- (IBAction)onClick:(id)sender {
+    
+    // Instance of UIButton
+    UIButton *btn = (UIButton*)sender;
+    
+    switch (btn.tag) {
+        case 0:
+            NSLog(@"ButtonOne was pressed");
+            break;
+        case 1:
+            NSLog(@"ButtonTwo was pressed");
+            break;
+        case 2:
+            NSLog(@"ButtonThree was pressed");
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    
 }
 
-- (IBAction)buttonTwo:(id)sender {
-    NSLog(@"ButtonTwo was pressed");
-}
 
-- (IBAction)buttonThree:(id)sender {
-    NSLog(@"ButtonThree was pressed");
-}
+
+
+
+
+
 @end
