@@ -12,7 +12,11 @@
 
 @interface GEMViewController ()
 
-// Lables
+// Order Lables
+@property (strong, nonatomic) IBOutlet UILabel *preOrder;
+@property (strong, nonatomic) IBOutlet UILabel *postOrder;
+
+// Vehicle lables
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneLable;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleOneDescription;
 @property (strong, nonatomic) IBOutlet UILabel *vehicleTwoLable;
@@ -49,7 +53,7 @@
         // Check validity
         if (f350) {
             self.vehicleOneLable.text = [f350 model];
-            self.vehicleOneDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [f350 modelYear], [f350 getFuleEconomy]];
+            self.vehicleOneDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg statarting at $%i", [f350 modelYear], [f350 getFuleEconomy], [f350 getPrice:1]];
         }
         
         // Instantiate Mustang
@@ -57,7 +61,7 @@
         // Check validity
         if (mustang) {
             self.vehicleTwoLable.text = [mustang model];
-            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [mustang modelYear], [mustang getFuleEconomy]];
+            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [mustang modelYear], [mustang getFuleEconomy], [mustang getPrice:1]];
         }
         
         // Instantiate Wrangler
@@ -65,8 +69,8 @@
         // Check validity
         if (wrangler) {
             self.vehicleThreeLable.text = [wrangler model];
-            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"My favorite modle year is %i, and it gets about %impg", [wrangler modelYear], [wrangler getFuleEconomy]];        }
-        
+            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [wrangler modelYear], [wrangler getFuleEconomy], [wrangler getPrice:1]];
+        }
     }
 }
 
