@@ -89,11 +89,14 @@
             break;
             
         default:
+            NSLog(@"Something went wrong and no button was regesterd");
+            
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Something went wrong!" message:@"Please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            
+            [errorAlert show];
+            
             break;
     }
-    
-    
-    
 }
 
 
