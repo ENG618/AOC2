@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C124D921978C51D003096A6 /* GEMInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C124D911978C51D003096A6 /* GEMInfoViewController.m */; };
 		5C409E191971E9DA0002F236 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C409E181971E9DA0002F236 /* Foundation.framework */; };
 		5C409E1B1971E9DA0002F236 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C409E1A1971E9DA0002F236 /* CoreGraphics.framework */; };
 		5C409E1D1971E9DA0002F236 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C409E1C1971E9DA0002F236 /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C124D901978C51D003096A6 /* GEMInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMInfoViewController.h; sourceTree = "<group>"; };
+		5C124D911978C51D003096A6 /* GEMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMInfoViewController.m; sourceTree = "<group>"; };
 		5C409E151971E9DA0002F236 /* AOCProject1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOCProject1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C409E181971E9DA0002F236 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C409E1A1971E9DA0002F236 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -135,6 +138,8 @@
 				5C409E2D1971E9DA0002F236 /* Main_iPad.storyboard */,
 				5C409E301971E9DA0002F236 /* GEMViewController.h */,
 				5C409E311971E9DA0002F236 /* GEMViewController.m */,
+				5C124D901978C51D003096A6 /* GEMInfoViewController.h */,
+				5C124D911978C51D003096A6 /* GEMInfoViewController.m */,
 				5C409E331971E9DA0002F236 /* Images.xcassets */,
 				5C409E1F1971E9DA0002F236 /* Supporting Files */,
 				5C409E5C1971EAD70002F236 /* Custum Class */,
@@ -294,6 +299,7 @@
 				5C409E251971E9DA0002F236 /* main.m in Sources */,
 				5C409E5F1971EB5B0002F236 /* GEMBaseVehicle.m in Sources */,
 				5C409E581971EAA80002F236 /* GEMWrangler.m in Sources */,
+				5C124D921978C51D003096A6 /* GEMInfoViewController.m in Sources */,
 				5C409E621971EB950002F236 /* GEMVehicleFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
