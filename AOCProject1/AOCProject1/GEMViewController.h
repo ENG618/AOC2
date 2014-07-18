@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMVehicleFactory.h"
 
-@interface GEMViewController : UIViewController 
+@interface GEMViewController : UIViewController
+
+@property int amountOrdered;
+@property GEMF350 *f350;
+@property GEMMustang *mustang;
+@property GEMWrangler *wrangler;
 
 @end

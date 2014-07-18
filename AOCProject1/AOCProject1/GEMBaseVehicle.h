@@ -23,6 +23,7 @@ typedef enum
 @property BOOL isFourByFour;
 @property int fuleEconomy;
 @property int basePrice;
+@property int finalPrice;
 
 
 // Base methods

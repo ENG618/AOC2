@@ -116,10 +116,13 @@
                                 <rect key="frame" x="20" y="60" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-0z-7Gd">
+                                    <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPD-0z-7Gd">
                                         <rect key="frame" x="20" y="15" width="94" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="tintColor" red="0.63702693060000004" green="0.85147901849999996" blue="0.8518401015" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="onChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="81E-CE-ImE"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="158" translatesAutoresizingMaskIntoConstraints="NO" id="2Vu-Lp-gvr">
                                         <rect key="frame" x="122" y="0.0" width="158" height="60"/>
@@ -145,6 +148,7 @@
                         <outlet property="butnOne" destination="I4H-1j-10X" id="TN3-qV-chc"/>
                         <outlet property="butnThree" destination="2RX-np-fBs" id="6VE-3y-hiV"/>
                         <outlet property="butnTwo" destination="3Jp-GY-oD7" id="8xg-VH-7HP"/>
+                        <outlet property="orderQuantity" destination="vPD-0z-7Gd" id="G6g-v7-tv3"/>
                         <outlet property="postOrder" destination="1Pw-dp-ESi" id="tX0-bR-qWy"/>
                         <outlet property="preOrder" destination="2Vu-Lp-gvr" id="0Qm-Jq-joF"/>
                         <outlet property="vehicleOneDescription" destination="41S-Ba-hmo" id="gt1-gL-Pok"/>
