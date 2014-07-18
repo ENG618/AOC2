@@ -10,6 +10,8 @@
 
 @interface GEMInfoViewController ()
 - (IBAction)onClose:(id)sender;
+- (IBAction)onChange:(id)sender;
+
 
 @end
 
@@ -42,4 +44,30 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)onChange:(id)sender
+{
+    UISegmentedControl *seg = (UISegmentedControl *)sender;
+    
+    // Check validity
+    if (seg) {
+        int selectedIndex = seg.selectedSegmentIndex;
+        
+        switch (selectedIndex) {
+            case 0:
+                self.view.backgroundColor = [UIColor colorWithRed:153 green:204 blue:204 alpha:1];
+                break;
+            case 1:
+                self.view.backgroundColor = [UIColor redColor];
+                break;
+            case 2:
+                self.view.backgroundColor = [UIColor greenColor];
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
 @end
