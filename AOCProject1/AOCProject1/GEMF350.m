@@ -21,6 +21,7 @@
         [self setModelYear:2012];
         [self setIsFourByFour:YES];
         [self setIsDesel:YES];
+        [self setBasePrice:48000];
         [super printName];
     }
     return self;

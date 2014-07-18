@@ -9,13 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface GEMBaseVehicle : NSObject
-//{
-//@protected
-//    NSString *model;
-//    int modelYear;
-//    BOOL isFourByFour;
-//    int fuleEconomy;
-//}
 
 typedef enum
 {
@@ -29,6 +22,7 @@ typedef enum
 @property int modelYear;
 @property BOOL isFourByFour;
 @property int fuleEconomy;
+@property int basePrice;
 
 
 // Base methods
@@ -38,12 +32,11 @@ typedef enum
 
 // Getter
 -(int)getFuleEconomy;
-//
-//// Setter
-//-(void)setVehicle:(NSString*)modleName;
+-(int)getPrice:(int)numVehiclesRequested;
 
 // Calulatioin
 -(int)calcFuleEconomy;
+-(int)calcPrice:(int)numVehicles;
 
 -(void)printName;
 

@@ -21,6 +21,7 @@
         [self setModelYear:1967];
         [self setIsFourByFour:NO];
         [self setHorsePower:351];
+        [self setBasePrice:44500];
         [super printName];
     }
     return self;

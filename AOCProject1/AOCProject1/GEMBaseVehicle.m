@@ -12,7 +12,7 @@
 @implementation GEMBaseVehicle
 
 // Creates getter and setter method for properties
-@synthesize model,modelYear, isFourByFour, fuleEconomy;
+@synthesize model,modelYear, isFourByFour, fuleEconomy, basePrice;
 
 -(id)init
 {
@@ -22,6 +22,7 @@
         modelYear = 2014;
         isFourByFour = NO;
         fuleEconomy = 15;
+        basePrice = 0;
 
     }
     return self;
@@ -49,6 +50,17 @@
         newFuleEconomy = fuleEconomy - 5;
     }
     return newFuleEconomy;
+}
+
+-(int)getPrice:(int)numVehiclesRequested
+{
+    return [self calcPrice:numVehiclesRequested];
+}
+
+-(int)calcPrice:(int)numVehicles
+{
+    int totalCost = numVehicles * basePrice;
+    return totalCost;
 }
 
 @end

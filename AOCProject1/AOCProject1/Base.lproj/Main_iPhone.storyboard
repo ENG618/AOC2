@@ -142,6 +142,9 @@
                         <color key="backgroundColor" red="0.63702693062360782" green="0.85147901851620045" blue="0.85184010152284262" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="butnOne" destination="I4H-1j-10X" id="TN3-qV-chc"/>
+                        <outlet property="butnThree" destination="2RX-np-fBs" id="6VE-3y-hiV"/>
+                        <outlet property="butnTwo" destination="3Jp-GY-oD7" id="8xg-VH-7HP"/>
                         <outlet property="vehicleOneDescription" destination="41S-Ba-hmo" id="gt1-gL-Pok"/>
                         <outlet property="vehicleOneLable" destination="qCB-To-w0Z" id="g9f-2j-mwO"/>
                         <outlet property="vehicleThreeDescription" destination="hgq-oC-PSU" id="TfE-Bq-H8E"/>
