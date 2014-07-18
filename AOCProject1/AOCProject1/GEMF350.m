@@ -17,7 +17,7 @@
 {
     self = [super init];
     if (self) {
-        [self setModel:@"Ford F-150"];
+        [self setModel:@"Ford F-350"];
         [self setModelYear:2012];
         [self setIsFourByFour:YES];
         [self setIsDesel:YES];

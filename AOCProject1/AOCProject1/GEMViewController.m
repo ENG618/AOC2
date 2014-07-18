@@ -47,6 +47,7 @@
     
     // Set defalt order number
     amountOrdered = 1;
+    self.postOrder.text = @"";
     
     // Create instance of factory
     GEMVehicleFactory *factory = [[GEMVehicleFactory alloc] init];
@@ -58,7 +59,7 @@
         // Check validity
         if (f350) {
             self.vehicleOneLable.text = [f350 model];
-            self.vehicleOneDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg statarting at $%i", [f350 modelYear], [f350 getFuleEconomy], [f350 getPrice:amountOrdered]];
+            self.vehicleOneDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg statarting at $%i", [f350 modelYear], [f350 getFuleEconomy], [f350 basePrice]];
         }
         
         // Instantiate Mustang
@@ -66,7 +67,7 @@
         // Check validity
         if (mustang) {
             self.vehicleTwoLable.text = [mustang model];
-            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [mustang modelYear], [mustang getFuleEconomy], [mustang getPrice:amountOrdered]];
+            self.vehicleTwoDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [mustang modelYear], [mustang getFuleEconomy], [mustang basePrice]];
         }
         
         // Instantiate Wrangler
@@ -74,7 +75,7 @@
         // Check validity
         if (wrangler) {
             self.vehicleThreeLable.text = [wrangler model];
-            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [wrangler modelYear], [wrangler getFuleEconomy], [wrangler getPrice:amountOrdered]];
+            self.vehicleThreeDescription.text = [NSString stringWithFormat:@"We have a %i, and it gets about %impg starting at $%i", [wrangler modelYear], [wrangler getFuleEconomy], [wrangler basePrice]];
         }
     }
 }
@@ -106,6 +107,9 @@
                 butnTwo.enabled = YES;
                 butnThree.enabled = YES;
                 
+                // Call calculations
+                [f350 getPrice:amountOrdered];
+                
                 // Set order total lable
                 self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [f350 finalPrice]];
                 break;
@@ -118,6 +122,12 @@
                 // Ensure all other buttons are availible
                 butnOne.enabled = YES;
                 butnThree.enabled = YES;
+                
+                // Call calculations
+                [mustang getPrice:amountOrdered];
+                
+                // Set order total lable
+                self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [mustang finalPrice]];
                 break;
                 // Button 3 pushed
             case 2:
@@ -128,8 +138,13 @@
                 // Ensure all other buttons are availible
                 butnOne.enabled = YES;
                 butnTwo.enabled = YES;
-                break;
                 
+                // Call calculations
+                [wrangler getPrice:amountOrdered];
+                
+                // Set order total lable
+                self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [wrangler finalPrice]];
+                break;
             default:
                 
                 // If no button is registered as clicked log message to console
