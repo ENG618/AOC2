@@ -47,7 +47,10 @@
     
     // Set defalt order number
     amountOrdered = 1;
+    // Clear postOrder label
     self.postOrder.text = @"";
+    // Set default preOrder label
+    self.preOrder.text = [NSString stringWithFormat:@"Your order consists of %i vehicle.  Please select which vehicle you prefer", amountOrdered];
     
     // Create instance of factory
     GEMVehicleFactory *factory = [[GEMVehicleFactory alloc] init];
@@ -97,8 +100,9 @@
     if (btn)
     {
         switch (btn.tag) {
-                // Button 1 pushed
+                
             case 0:
+                // Button 1 pushed
                 NSLog(@"ButtonOne was pressed");
                 
                 // Disable buttin if pressed
@@ -113,8 +117,9 @@
                 // Set order total lable
                 self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [f350 finalPrice]];
                 break;
-                // Button 2 pushed
+                
             case 1:
+                // Button 2 pushed
                 NSLog(@"ButtonTwo was pressed");
                 
                 // Disable buttin if pressed
@@ -129,8 +134,9 @@
                 // Set order total lable
                 self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [mustang finalPrice]];
                 break;
-                // Button 3 pushed
+                
             case 2:
+                // Button 3 pushed
                 NSLog(@"ButtonThree was pressed");
                 
                 // Disable buttin if pressed
@@ -145,8 +151,8 @@
                 // Set order total lable
                 self.postOrder.text = [NSString stringWithFormat:@"Total cost is: %i", [wrangler finalPrice]];
                 break;
-            default:
                 
+            default:
                 // If no button is registered as clicked log message to console
                 NSLog(@"Something went wrong and no button was regesterd");
                 
@@ -171,6 +177,14 @@
         
         // Update order number
         amountOrdered = quantityStepper.value;
+        
+        if (amountOrdered == 1) {
+            // Set preOrder label
+            self.preOrder.text = [NSString stringWithFormat:@"Your order consists of %i vehicle.  Please select which vehicle you prefer", amountOrdered];
+        }else{
+            // Set preOrder label
+            self.preOrder.text = [NSString stringWithFormat:@"Your order consists of %i vehicles.  Please select which vehicle you prefer", amountOrdered];
+        }
     }
     
 }
