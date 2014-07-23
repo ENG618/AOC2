@@ -11,6 +11,7 @@
 @interface GEMEventsViewController : UIViewController
 {
     CGRect tvFrame;
+    CGPoint originalCenter;
 }
 
 @end

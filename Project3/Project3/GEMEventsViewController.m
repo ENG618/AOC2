@@ -20,12 +20,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    originalCenter = self.view.center;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     // Cache the original size of the textview
     tvFrame = self.eventTV.frame;
+    
     
     // Receive notification for when keyboard will show
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -42,23 +44,40 @@
 
 #pragma mark - Keyboard handler
 
+-(void)keyboardWillShow:(NSNotification *)notification
+{
+    // Obtain keyboard frame (width/height)
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // Calculate new tv height
+    CGRect newFrame = CGRectMake(self.eventTV.frame.origin.x, self.eventTV.frame.origin.y, self.eventTV.frame.size.width, self.eventTV.frame.size.height - keyboardSize.height);
+    
+    // Set tv frame
+    [self.eventTV setFrame:newFrame];
+    
+    // Move entire view up to allow room for keyboard
+    //self.view.center = CGPointMake(originalCenter.x, originalCenter.y - keyboardSize.height);
+}
+
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    // Restore original tv height
+    [self.eventTV setFrame:tvFrame];
+    
+    // Restore original view
+    //self.view.center = originalCenter;
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }
 
--(void)keyboardWillShow:(NSNotification *)notification
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
 {
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [textField resignFirstResponder];
     
-    CGRect newFrame = CGRectMake(self.eventTV.frame.origin.x, self.eventTV.frame.origin.y, 280.0f, self.eventTV.frame.size.height - keyboardSize.height);
-    
-    [self.eventTV setFrame:newFrame];
-}
-
--(void)keyboardWillHide:(NSNotification *)notification
-{
-    [self.eventTV setFrame:tvFrame];
+    return NO;
 }
 
 /*

@@ -36,11 +36,6 @@
 
 #pragma mark - Keyboard handler
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
-}
-
 -(void)keyboardWillShow:(NSNotification *)notification
 {
     
@@ -49,6 +44,18 @@
 -(void)keyboardWillHide:(NSNotification *)notification
 {
     
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 #pragma mark - Buttons
