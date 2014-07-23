@@ -25,6 +25,7 @@
 		5CB46A15197F323C0084976B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB46A14197F323C0084976B /* Main_iPhone.storyboard */; };
 		5CB46A18197F32940084976B /* GEMEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB46A17197F32940084976B /* GEMEventsViewController.m */; };
 		5CB46A1B197F333B0084976B /* GEMAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */; };
+		5CB46A1F197F3C680084976B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB46A1E197F3C680084976B /* Main_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		5CB46A17197F32940084976B /* GEMEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMEventsViewController.m; sourceTree = "<group>"; };
 		5CB46A19197F333B0084976B /* GEMAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddEventViewController.h; sourceTree = "<group>"; };
 		5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddEventViewController.m; sourceTree = "<group>"; };
+		5CB46A1E197F3C680084976B /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +125,11 @@
 		5CB469E7197F313F0084976B /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
+				5CB46A1D197F3A8D0084976B /* iPad */,
 				5CB469F0197F313F0084976B /* GEMAppDelegate.h */,
 				5CB469F1197F313F0084976B /* GEMAppDelegate.m */,
 				5CB46A14197F323C0084976B /* Main_iPhone.storyboard */,
+				5CB46A1E197F3C680084976B /* Main_iPad.storyboard */,
 				5CB46A1C197F33450084976B /* VC's */,
 				5CB469F6197F313F0084976B /* Images.xcassets */,
 				5CB469F3197F313F0084976B /* Project3.xcdatamodeld */,
@@ -172,6 +176,13 @@
 				5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */,
 			);
 			name = "VC's";
+			sourceTree = "<group>";
+		};
+		5CB46A1D197F3A8D0084976B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB469EC197F313F0084976B /* InfoPlist.strings in Resources */,
+				5CB46A1F197F3C680084976B /* Main_iPad.storyboard in Resources */,
 				5CB469F7197F313F0084976B /* Images.xcassets in Resources */,
 				5CB46A15197F323C0084976B /* Main_iPhone.storyboard in Resources */,
 			);
@@ -397,7 +409,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project3/Project3-Prefix.pch";
 				INFOPLIST_FILE = "Project3/Project3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,7 +424,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project3/Project3-Prefix.pch";
 				INFOPLIST_FILE = "Project3/Project3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

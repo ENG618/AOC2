@@ -26,6 +26,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Buttons
+
+- (IBAction)onCancel:(id)sender
+{
+    NSLog(@"Cancel button was pressed");
+    // Close VC
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)onSave:(id)sender
+{
+    NSLog(@"Save button was pressed");
+    // Save code goes here
+}
+
+- (IBAction)onKeyboardClose:(id)sender
+{
+    NSLog(@"Close Keyboard was closed");
+    // Close keyboard code goes here
+}
+
+
 /*
 #pragma mark - Navigation
 
