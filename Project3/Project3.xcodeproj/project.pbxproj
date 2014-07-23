@@ -22,6 +22,9 @@
 		5CB46A01197F31400084976B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB469E5197F313F0084976B /* CoreData.framework */; };
 		5CB46A09197F31400084976B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CB46A07197F31400084976B /* InfoPlist.strings */; };
 		5CB46A0B197F31400084976B /* Project3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB46A0A197F31400084976B /* Project3Tests.m */; };
+		5CB46A15197F323C0084976B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB46A14197F323C0084976B /* Main_iPhone.storyboard */; };
+		5CB46A18197F32940084976B /* GEMEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB46A17197F32940084976B /* GEMEventsViewController.m */; };
+		5CB46A1B197F333B0084976B /* GEMAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		5CB46A06197F31400084976B /* Project3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project3Tests-Info.plist"; sourceTree = "<group>"; };
 		5CB46A08197F31400084976B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CB46A0A197F31400084976B /* Project3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project3Tests.m; sourceTree = "<group>"; };
+		5CB46A14197F323C0084976B /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5CB46A16197F32940084976B /* GEMEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMEventsViewController.h; sourceTree = "<group>"; };
+		5CB46A17197F32940084976B /* GEMEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMEventsViewController.m; sourceTree = "<group>"; };
+		5CB46A19197F333B0084976B /* GEMAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMAddEventViewController.h; sourceTree = "<group>"; };
+		5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMAddEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 			children = (
 				5CB469F0197F313F0084976B /* GEMAppDelegate.h */,
 				5CB469F1197F313F0084976B /* GEMAppDelegate.m */,
+				5CB46A14197F323C0084976B /* Main_iPhone.storyboard */,
+				5CB46A1C197F33450084976B /* VC's */,
 				5CB469F6197F313F0084976B /* Images.xcassets */,
 				5CB469F3197F313F0084976B /* Project3.xcdatamodeld */,
 				5CB469E8197F313F0084976B /* Supporting Files */,
@@ -151,6 +161,17 @@
 				5CB46A07197F31400084976B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CB46A1C197F33450084976B /* VC's */ = {
+			isa = PBXGroup;
+			children = (
+				5CB46A16197F32940084976B /* GEMEventsViewController.h */,
+				5CB46A17197F32940084976B /* GEMEventsViewController.m */,
+				5CB46A19197F333B0084976B /* GEMAddEventViewController.h */,
+				5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */,
+			);
+			name = "VC's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +252,7 @@
 			files = (
 				5CB469EC197F313F0084976B /* InfoPlist.strings in Resources */,
 				5CB469F7197F313F0084976B /* Images.xcassets in Resources */,
+				5CB46A15197F323C0084976B /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB46A1B197F333B0084976B /* GEMAddEventViewController.m in Sources */,
 				5CB469F2197F313F0084976B /* GEMAppDelegate.m in Sources */,
+				5CB46A18197F32940084976B /* GEMEventsViewController.m in Sources */,
 				5CB469F5197F313F0084976B /* Project3.xcdatamodeld in Sources */,
 				5CB469EE197F313F0084976B /* main.m in Sources */,
 			);
@@ -450,6 +474,7 @@
 				5CB46A10197F31400084976B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CB46A11197F31400084976B /* Build configuration list for PBXNativeTarget "Project3Tests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +483,7 @@
 				5CB46A13197F31400084976B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
