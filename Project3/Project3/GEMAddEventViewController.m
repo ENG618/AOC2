@@ -9,6 +9,7 @@
 #import "GEMAddEventViewController.h"
 
 @interface GEMAddEventViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *eventDescriptionsTV;
 
 @end
 
@@ -35,6 +36,11 @@
 
 #pragma mark - Keyboard handler
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 -(void)keyboardWillShow:(NSNotification *)notification
 {
     
@@ -58,12 +64,17 @@
 {
     NSLog(@"Save button was pressed");
     // Save code goes here
+    
+    // Close keyboard
+    [self.eventDescriptionsTV resignFirstResponder];
 }
 
 - (IBAction)onKeyboardClose:(id)sender
 {
     NSLog(@"Close Keyboard was closed");
-    // Close keyboard code goes here
+    
+    // Close keyboard
+    [self.eventDescriptionsTV resignFirstResponder];
 }
 
 

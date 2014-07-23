@@ -24,8 +24,13 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    // Cache the original size of the textview
+    tvFrame = self.eventTV.frame;
     
+    // Receive notification for when keyboard will show
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+
+    // Receive notification for when keyboard will hide
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
@@ -37,14 +42,23 @@
 
 #pragma mark - Keyboard handler
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 -(void)keyboardWillShow:(NSNotification *)notification
 {
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
+    CGRect newFrame = CGRectMake(self.eventTV.frame.origin.x, self.eventTV.frame.origin.y, 280.0f, self.eventTV.frame.size.height - keyboardSize.height);
+    
+    [self.eventTV setFrame:newFrame];
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    
+    [self.eventTV setFrame:tvFrame];
 }
 
 /*
