@@ -47,21 +47,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RIj-Lt-xD2" firstAttribute="leading" secondItem="XXD-8y-WYt" secondAttribute="leading" constant="20" id="04V-rQ-4eU"/>
-                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="leading" secondItem="RIj-Lt-xD2" secondAttribute="leading" id="38Y-uv-4CA"/>
-                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="leading" secondItem="8UP-r9-fy4" secondAttribute="leading" id="396-re-drs"/>
-                            <constraint firstAttribute="trailing" secondItem="RIj-Lt-xD2" secondAttribute="trailing" constant="20" id="5as-h7-lhX"/>
-                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="trailing" secondItem="8UP-r9-fy4" secondAttribute="trailing" id="8dJ-Wi-bQK"/>
-                            <constraint firstAttribute="bottom" secondItem="RIj-Lt-xD2" secondAttribute="bottom" constant="20" symbolic="YES" id="GHk-bC-LD6"/>
-                            <constraint firstItem="RIj-Lt-xD2" firstAttribute="trailing" secondItem="0Hf-yP-g9V" secondAttribute="trailing" id="Hav-JF-FUT"/>
-                            <constraint firstItem="8UP-r9-fy4" firstAttribute="leading" secondItem="XXD-8y-WYt" secondAttribute="leading" constant="20" symbolic="YES" id="MbN-NN-YXa"/>
-                            <constraint firstItem="RIj-Lt-xD2" firstAttribute="top" secondItem="0Hf-yP-g9V" secondAttribute="bottom" constant="8" symbolic="YES" id="QQk-68-SvD"/>
-                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="top" secondItem="8UP-r9-fy4" secondAttribute="bottom" constant="8" symbolic="YES" id="SrE-t3-HOd"/>
-                            <constraint firstItem="8UP-r9-fy4" firstAttribute="top" secondItem="XXD-8y-WYt" secondAttribute="top" constant="20" symbolic="YES" id="ucI-9k-FSv"/>
-                            <constraint firstAttribute="trailing" secondItem="8UP-r9-fy4" secondAttribute="trailing" constant="20" symbolic="YES" id="zVt-Sw-iz3"/>
+                            <constraint firstItem="8UP-r9-fy4" firstAttribute="leading" secondItem="XXD-8y-WYt" secondAttribute="leading" constant="20" symbolic="YES" id="ELH-bp-Te4"/>
+                            <constraint firstAttribute="trailing" secondItem="8UP-r9-fy4" secondAttribute="trailing" constant="20" symbolic="YES" id="IBQ-Zi-NKn"/>
+                            <constraint firstItem="RIj-Lt-xD2" firstAttribute="top" secondItem="0Hf-yP-g9V" secondAttribute="bottom" constant="8" symbolic="YES" id="PUe-qC-Bsg"/>
+                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="leading" secondItem="RIj-Lt-xD2" secondAttribute="leading" id="Pyx-AD-w1e"/>
+                            <constraint firstItem="8UP-r9-fy4" firstAttribute="top" secondItem="XXD-8y-WYt" secondAttribute="top" constant="20" symbolic="YES" id="W0s-YB-0gL"/>
+                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="leading" secondItem="8UP-r9-fy4" secondAttribute="leading" id="abz-cY-6Y1"/>
+                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="trailing" secondItem="RIj-Lt-xD2" secondAttribute="trailing" id="eSK-dT-6o8"/>
+                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="trailing" secondItem="8UP-r9-fy4" secondAttribute="trailing" id="he0-Ux-ZbE"/>
+                            <constraint firstAttribute="bottom" secondItem="RIj-Lt-xD2" secondAttribute="bottom" constant="20" symbolic="YES" id="lCV-eo-GIm"/>
+                            <constraint firstItem="0Hf-yP-g9V" firstAttribute="top" secondItem="8UP-r9-fy4" secondAttribute="bottom" constant="8" symbolic="YES" id="pbZ-cH-Ccy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addEventBtn" destination="RIj-Lt-xD2" id="yqD-8j-l3X"/>
                         <outlet property="eventTV" destination="0Hf-yP-g9V" id="Wpd-V0-xKa"/>
                     </connections>
                 </viewController>
