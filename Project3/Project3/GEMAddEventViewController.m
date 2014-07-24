@@ -87,7 +87,19 @@
     NSLog(@"selected row: %d, selected component %d", row, component);
 }
 
- 
+#pragma mark - DatePicker
+
+- (IBAction)onDatePickerChange:(id)sender {
+    // Cast sender to UIDatePicker
+    UIDatePicker *dp = (UIDatePicker *)sender;
+    // Check validity
+    if (dp) {
+        NSDate *date = dp.date;
+        
+        NSLog(@"the selected date is: %@", date);
+    }
+}
+
 
 #pragma mark - Buttons
 
