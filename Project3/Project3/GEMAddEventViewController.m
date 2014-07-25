@@ -8,7 +8,7 @@
 
 #import "GEMAddEventViewController.h"
 
-@interface GEMAddEventViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface GEMAddEventViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *eventDescriptionsTV;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -69,10 +69,16 @@
 #pragma mark - DatePicker
 
 - (IBAction)onDatePickerChange:(id)sender {
+    
     // Cast sender to UIDatePicker
     UIDatePicker *dp = (UIDatePicker *)sender;
+    
     // Check validity
     if (dp) {
+        // Set min date to today
+        [dp setMinimumDate:[[NSDate alloc] initWithTimeIntervalSinceNow: 0]];
+        
+        
         NSDate *date = dp.date;
         
         NSLog(@"the selected date is: %@", date);
