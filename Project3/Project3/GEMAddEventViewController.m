@@ -61,32 +61,6 @@
     return YES;
 }
 
-#pragma mark - PickerView Delegate
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 3;
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return 10;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    if (component == 0) {
-        return @"first row";
-    }else{
-        return @"hello";
-    }
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    NSLog(@"selected row: %d, selected component %d", row, component);
-}
-
 #pragma mark - DatePicker
 
 - (IBAction)onDatePickerChange:(id)sender {
