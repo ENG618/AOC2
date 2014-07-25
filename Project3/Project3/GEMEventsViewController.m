@@ -17,6 +17,8 @@
 
 @implementation GEMEventsViewController
 
+@synthesize event, eventDate, eventDateString;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -97,7 +99,18 @@
 
 -(void)didCreateEventWithName:(NSString *)name andDate:(NSDate *)date
 {
+    // Love info passed from AddEventVC
     NSLog(@"Passed from delegate text:%@, date:%@", name, date);
+    
+    // Format date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    //[dateFormatter setDateStyle:NSDateFormatterFullStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    // Convert date to string
+    eventDateString = [dateFormatter stringFromDate:date];
+    NSLog(@"%@", eventDateString);
     
 }
 

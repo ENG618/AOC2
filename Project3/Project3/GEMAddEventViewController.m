@@ -22,6 +22,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.datePicker.timeZone = [NSTimeZone localTimeZone];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -106,6 +108,9 @@
     
     // Call delegate to pass info to first VC
     [self.delegate didCreateEventWithName:self.eventDescriptionsTV.text andDate:self.datePicker.date];
+    
+    // Close VC
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

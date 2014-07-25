@@ -17,4 +17,8 @@
     CGPoint originalCenter;
 }
 
+@property NSDate* eventDate;
+@property NSString* eventDateString;
+@property NSString* event;
+
 @end
