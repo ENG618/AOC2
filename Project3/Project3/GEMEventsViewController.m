@@ -17,13 +17,14 @@
 
 @implementation GEMEventsViewController
 
-@synthesize event, eventDate, eventDateString;
+@synthesize event, eventDate, eventDateString, currentEvents;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     originalCenter = self.view.center;
+    self.eventTV.tag = 0;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -111,6 +112,24 @@
     // Convert date to string
     eventDateString = [dateFormatter stringFromDate:date];
     NSLog(@"%@", eventDateString);
+    
+    if (self.eventTV.tag == 0) {
+        NSLog(@"Default text");
+        currentEvents = [NSString stringWithFormat:@"Event: %@\nEventDate: %@", name, eventDateString];
+        
+        // Update textview text
+        self.eventTV.text = currentEvents;
+        // INcriment tag
+        self.eventTV.tag = self.eventTV.tag + 1;
+    }else{
+        NSLog(@"Custum text");
+        currentEvents = [NSString stringWithFormat:@"%@\n\nEvent: %@\nEventDate: %@", self.eventTV.text, name, eventDateString];
+        
+        // Update textview text
+        self.eventTV.text = currentEvents;
+        // Incriment tag
+        self.eventTV.tag = self.eventTV.tag + 1;
+    }
     
 }
 

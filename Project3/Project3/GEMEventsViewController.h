@@ -20,5 +20,7 @@
 @property NSDate* eventDate;
 @property NSString* eventDateString;
 @property NSString* event;
+@property NSString* currentEvents;
+
 
 @end
