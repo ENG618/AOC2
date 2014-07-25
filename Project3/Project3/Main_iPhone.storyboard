@@ -166,6 +166,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="closeKeyboardBtn" destination="Fea-0G-04g" id="98q-xa-G8P"/>
                         <outlet property="datePicker" destination="tZG-EI-e5s" id="K3L-6N-OWd"/>
                         <outlet property="eventDescriptionsTV" destination="gzv-LF-8hK" id="IVL-Rd-IwO"/>
                     </connections>

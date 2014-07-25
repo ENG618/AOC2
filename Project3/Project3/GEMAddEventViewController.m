@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *eventDescriptionsTV;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (strong, nonatomic) IBOutlet UIButton *closeKeyboardBtn;
 
 @end
 
@@ -26,6 +26,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    // Hide closeKeyboard button by default
+    [self.closeKeyboardBtn setHidden:YES];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -41,12 +44,14 @@
 
 -(void)keyboardWillShow:(NSNotification *)notification
 {
-    
+    // Show hideKeyboard button
+    [self.closeKeyboardBtn setHidden:NO];
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    
+    // Hide hideKeyboard button
+    [self.closeKeyboardBtn setHidden:YES];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -95,7 +100,7 @@
 
 - (IBAction)onKeyboardClose:(id)sender
 {
-    NSLog(@"Close Keyboard was closed");
+    NSLog(@"Close Keyboard was clicked");
     
     // Close keyboard
     [self.eventDescriptionsTV resignFirstResponder];
