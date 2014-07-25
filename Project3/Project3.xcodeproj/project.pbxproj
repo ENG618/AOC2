@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C7DAB1D1981F1B600B877F2 /* GEMAddEventDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GEMAddEventDelegate.h; sourceTree = "<group>"; };
 		5CB469DC197F313F0084976B /* Project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB469DF197F313F0084976B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CB469E1197F313F0084976B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +173,7 @@
 			children = (
 				5CB46A16197F32940084976B /* GEMEventsViewController.h */,
 				5CB46A17197F32940084976B /* GEMEventsViewController.m */,
+				5C7DAB1D1981F1B600B877F2 /* GEMAddEventDelegate.h */,
 				5CB46A19197F333B0084976B /* GEMAddEventViewController.h */,
 				5CB46A1A197F333B0084976B /* GEMAddEventViewController.m */,
 			);

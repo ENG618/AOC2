@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMAddEventDelegate.h"
+@class GEMAddEventViewController;
+
+@protocol GEMAddEventDelegate;
 
 @interface GEMAddEventViewController : UIViewController
+
+@property (weak, nonatomic) id<GEMAddEventDelegate> delegate;
 
 @end

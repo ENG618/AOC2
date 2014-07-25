@@ -102,6 +102,11 @@
     
     // Close keyboard
     [self.eventDescriptionsTV resignFirstResponder];
+    
+    
+    // Call delegate to pass info to first VC
+    [self.delegate didCreateEventWithName:self.eventDescriptionsTV.text andDate:self.datePicker.date];
+    
 }
 
 - (IBAction)onKeyboardClose:(id)sender

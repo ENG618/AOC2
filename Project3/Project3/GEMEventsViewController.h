@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GEMAddEventViewController.h"
+#import "GEMAddEventDelegate.h"
 
-@interface GEMEventsViewController : UIViewController
+@interface GEMEventsViewController : UIViewController <GEMAddEventDelegate>
 {
     CGRect tvFrame;
     CGRect butnFrame;
