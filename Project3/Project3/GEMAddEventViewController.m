@@ -121,10 +121,10 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
-        NSLog(@"Cancel button pressed");
+        NSLog(@"Cancel button pressed from alertView");
         [self dismissViewControllerAnimated:YES completion:nil];
     }else if (buttonIndex ==1){
-        NSLog(@"Okay button pressed");
+        NSLog(@"Okay button pressed from alertView");
     }
 }
 

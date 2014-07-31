@@ -30,6 +30,9 @@
     leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onRight:)];
     // Add getsure
     leftSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    // Obtain path to user defaults
+    defaults = [NSUserDefaults standardUserDefaults];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -37,6 +40,15 @@
     // Cache the original size of the textview
     tvFrame = self.eventTV.frame;
     butnFrame = self.swipeNewEvent.frame;
+    
+    // Set if data is in userdefaults load to eventsTV
+    if (defaults) {
+        // obtain string from defaults
+        NSString *events = [defaults objectForKey:@"events"];
+        if (events) {
+            self.eventTV.text = events;
+        }
+    }
     
     
     // Receive notification for when keyboard will show
@@ -155,7 +167,12 @@
 #pragma mark - Buttons
 
 - (IBAction)onSave:(id)sender {
-    
+    if (defaults) {
+        // Obtaine events from TV
+        NSString *eventsString = self.eventTV.text;
+        // Save string to user defaults
+        [defaults setObject:eventsString forKey:@"events"];
+    }
 }
 
 

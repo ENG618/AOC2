@@ -16,6 +16,7 @@
     CGRect butnFrame;
     CGPoint originalCenter;
     UISwipeGestureRecognizer *leftSwiper;
+    NSUserDefaults *defaults;
 }
 
 @property NSDate* eventDate;
