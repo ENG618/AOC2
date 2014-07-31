@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *eventDescriptionsTV;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) IBOutlet UIButton *closeKeyboardBtn;
+@property (strong, nonatomic) IBOutlet UILabel *swipeToSave;
 
 @end
 
@@ -34,6 +35,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    // Init gesture recognizer
+    rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onRight:)];
+    // Add swipe direction
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    // Link gesture to lable
+    [self.swipeToSave addGestureRecognizer:rightSwiper];
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +92,39 @@
         NSDate *date = dp.date;
         
         NSLog(@"the selected date is: %@", date);
+    }
+}
+
+#pragma mark - Swipe handler
+
+-(void)onRight:(UIGestureRecognizer*)recognizer{
+    if (self.eventDescriptionsTV.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event description blank"
+                                                        message:@"Please add an event description\n\n Or cancle add new event."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Okay", nil];
+        
+        [alert show];
+    }else{
+        NSLog(@"Lable was swiped to save");
+        // Save code goes here
+        
+        // Close keyboard
+        [self.eventDescriptionsTV resignFirstResponder];
+        
+        // Close VC
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        NSLog(@"Cancel button pressed");
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else if (buttonIndex ==1){
+        NSLog(@"Okay button pressed");
     }
 }
 

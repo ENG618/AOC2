@@ -13,6 +13,9 @@
 @protocol GEMAddEventDelegate;
 
 @interface GEMAddEventViewController : UIViewController
+{
+    UISwipeGestureRecognizer *rightSwiper;
+}
 
 @property (weak, nonatomic) id<GEMAddEventDelegate> delegate;
 
