@@ -113,8 +113,8 @@
         // Close keyboard
         [self.eventDescriptionsTV resignFirstResponder];
         
-        // Close VC
-        [self dismissViewControllerAnimated:YES completion:nil];
+        // Call closeVC method
+        [self closeVC];
     }
     
 }
@@ -122,7 +122,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 0) {
         NSLog(@"Cancel button pressed from alertView");
-        [self dismissViewControllerAnimated:YES completion:nil];
+        // Call closeVC method
+        [self closeVC];
     }else if (buttonIndex ==1){
         NSLog(@"Okay button pressed from alertView");
     }
@@ -134,10 +135,12 @@
 - (IBAction)onCancel:(id)sender
 {
     NSLog(@"Cancel button was pressed");
-    // Close VC
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // Call closeVC method
+    [self closeVC];
 }
 
+/*
+// Depricated save button
 - (IBAction)onSave:(id)sender
 {
     NSLog(@"Save button was pressed");
@@ -150,10 +153,11 @@
     // Call delegate to pass info to first VC
     [self.delegate didCreateEventWithName:self.eventDescriptionsTV.text andDate:self.datePicker.date];
     
-    // Close VC
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
+    // Call closeVC method
+    [self closeVC];
+ 
 }
+*/
 
 - (IBAction)onKeyboardClose:(id)sender
 {
@@ -161,6 +165,11 @@
     
     // Close keyboard
     [self.eventDescriptionsTV resignFirstResponder];
+}
+
+-(void)closeVC{
+    // Close VC
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

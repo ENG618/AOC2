@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic) id<GEMAddEventDelegate> delegate;
 
+-(void)closeVC;
+
 @end
