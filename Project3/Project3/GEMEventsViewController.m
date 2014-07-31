@@ -11,7 +11,7 @@
 @interface GEMEventsViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextView *eventTV;
-@property (strong, nonatomic) IBOutlet UIButton *addEventBtn;
+@property (strong, nonatomic) IBOutlet UILabel *swipeNewEvent;
 
 @end
 
@@ -25,13 +25,18 @@
     // Do any additional setup after loading the view.
     originalCenter = self.view.center;
     self.eventTV.tag = 0;
+    
+    // Init gesture recognizer
+    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onRight:)];
+    // Add getsure
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionRight;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     // Cache the original size of the textview
     tvFrame = self.eventTV.frame;
-    butnFrame = self.addEventBtn.frame;
+    butnFrame = self.swipeNewEvent.frame;
     
     
     // Receive notification for when keyboard will show
@@ -39,6 +44,14 @@
 
     // Receive notification for when keyboard will hide
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    // Init gesture recognizer
+    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onRight:)];
+    // Add swipe direction
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+    // Link gesture to lable
+    [self.swipeNewEvent addGestureRecognizer:leftSwiper];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,10 +74,10 @@
     [self.eventTV setFrame:newFrame];
     
     // Calculate new but height
-    CGRect newBtnFrame = CGRectMake(self.addEventBtn.frame.origin.x, self.addEventBtn.frame.origin.y - keyboardSize.height, self.addEventBtn.frame.size.width, self.addEventBtn.frame.size.height);
+    CGRect newBtnFrame = CGRectMake(self.swipeNewEvent.frame.origin.x, self.swipeNewEvent.frame.origin.y - keyboardSize.height, self.swipeNewEvent.frame.size.width, self.swipeNewEvent.frame.size.height);
     
     // Set butn frame
-    [self.addEventBtn setFrame:newBtnFrame];
+    [self.swipeNewEvent setFrame:newBtnFrame];
     
     
     
@@ -81,7 +94,7 @@
     //self.view.center = originalCenter;
     
     // Restore original butn height
-    [self.addEventBtn setFrame:butnFrame];
+    [self.swipeNewEvent setFrame:butnFrame];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -94,6 +107,12 @@
     [textField resignFirstResponder];
     
     return NO;
+}
+
+#pragma mark - Swipe Gesture handler
+
+-(void)onRight:(UIGestureRecognizer*)recognizer{
+    [self performSegueWithIdentifier:@"newEventSegue" sender:self];
 }
 
 #pragma mark - GEMAddEvent Delegate

@@ -15,6 +15,7 @@
     CGRect tvFrame;
     CGRect butnFrame;
     CGPoint originalCenter;
+    UISwipeGestureRecognizer *leftSwiper;
 }
 
 @property NSDate* eventDate;
