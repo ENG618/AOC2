@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GEMAddEventViewController.h"
-#import "GEMAddEventDelegate.h"
 
-@interface GEMEventsViewController : UIViewController <GEMAddEventDelegate>
+@interface GEMEventsViewController : UIViewController //<GEMAddEventDelegate>
 {
     CGRect tvFrame;
     CGRect butnFrame;
@@ -22,7 +21,10 @@
 @property NSDate* eventDate;
 @property NSString* eventDateString;
 @property NSString* event;
-@property NSString* currentEvents;
+@property NSMutableString* currentEvents;
 
+-(void)didCreateEventWithName:(NSString *)name andDate:(NSDate *)date;
+-(void)loadDefaultData;
+-(void)saveToDefaults;
 
 @end

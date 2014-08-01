@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GEMAddEventDelegate.h"
 @class GEMAddEventViewController;
 
 @protocol GEMAddEventDelegate;
@@ -17,8 +16,11 @@
     UISwipeGestureRecognizer *rightSwiper;
 }
 
-@property (weak, nonatomic) id<GEMAddEventDelegate> delegate;
+//@property (weak, nonatomic) id<GEMAddEventDelegate> delegate;
+@property NSDate* eventDate;
+@property NSString* eventString;
 
+//-(void)validateEvent;
 -(void)closeVC;
 
 @end

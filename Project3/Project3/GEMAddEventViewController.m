@@ -7,6 +7,7 @@
 //
 
 #import "GEMAddEventViewController.h"
+@class GEMEventsViewController;
 
 @interface GEMAddEventViewController ()
 
@@ -18,6 +19,8 @@
 @end
 
 @implementation GEMAddEventViewController
+
+@synthesize eventString, eventDate;
 
 - (void)viewDidLoad
 {
@@ -95,9 +98,10 @@
     }
 }
 
-#pragma mark - Swipe handler
-
+//#pragma mark - Swipe handler
+//
 -(void)onRight:(UIGestureRecognizer*)recognizer{
+//-(void)validateEvent{
     if (self.eventDescriptionsTV.text.length == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event description blank"
                                                         message:@"Please add an event description\n\n Or cancle add new event."
@@ -106,7 +110,7 @@
                                               otherButtonTitles:@"Okay", nil];
         
         [alert show];
-    }else{
+    }else if (self.eventDescriptionsTV.text.length > 0){
         NSLog(@"Lable was swiped to save");
         // Save code goes here
         
@@ -114,7 +118,8 @@
         [self.eventDescriptionsTV resignFirstResponder];
         
         // Call closeVC method
-        [self closeVC];
+        //[self closeVC];
+        [self performSegueWithIdentifier:@"unwindToEvents" sender:self];
     }
     
 }
@@ -172,16 +177,17 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    // Validate event
+    //[self validateEvent];
+    if ([segue.identifier isEqualToString:@"unwindToEvents"]) {
+        eventDate = self.datePicker.date;
+        eventString = self.eventDescriptionsTV.text;
+    }
 }
-*/
 
 @end

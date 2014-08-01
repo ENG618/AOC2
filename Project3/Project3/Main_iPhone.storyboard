@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">No events created just yet.
 
-Please select "Add Event" at the bottom of your screen to eanter one.</string>
+Please swipe to the left at the bottom of the screen to create a new event.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
@@ -171,9 +171,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sh5-1g-OBh" appends="YES" id="YvY-Y5-r8x"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="tZG-EI-e5s" firstAttribute="top" secondItem="XF7-6J-1hn" secondAttribute="bottom" constant="8" symbolic="YES" id="0f7-L9-eTJ"/>
                             <constraint firstItem="tZG-EI-e5s" firstAttribute="leading" secondItem="dQR-2O-S9W" secondAttribute="leading" id="4A3-xp-paY"/>
@@ -191,6 +195,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="XF7-6J-1hn" firstAttribute="top" secondItem="gzv-LF-8hK" secondAttribute="bottom" constant="8" symbolic="YES" id="ouq-BI-IKw"/>
                             <constraint firstItem="Dsj-IB-Dx8" firstAttribute="leading" secondItem="dir-g7-P5t" secondAttribute="leading" id="wRv-XQ-8FP"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Sh5-1g-OBh" appends="YES" id="Cxf-Oj-T9L"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="closeKeyboardBtn" destination="Fea-0G-04g" id="98q-xa-G8P"/>
@@ -200,6 +207,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxK-0q-2aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XdP-1h-DET" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="Sh5-1g-OBh">
+                    <connections>
+                        <segue destination="XdP-1h-DET" kind="unwind" identifier="unwindToEvents" unwindAction="unwind:" id="Ef7-D0-BsV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="753" y="70"/>
         </scene>
